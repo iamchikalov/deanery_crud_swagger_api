@@ -1,11 +1,8 @@
 import { Module } from '@nestjs/common'
-import { AppController } from './app.controller'
-import { AppService } from './app.service'
 import { MongooseModule } from "@nestjs/mongoose"
 import { ConfigModule } from "../utils/config"
-import { StudentModule } from "../modules/student.module"
-import { GradesModule } from "../modules/grades.module"
-
+import { StudentModule } from "./student.module"
+import { GradesModule } from "./grades.module"
 
 @Module({
   imports: [
@@ -14,9 +11,7 @@ import { GradesModule } from "../modules/grades.module"
       useNewUrlParser: true,
     }),
       StudentModule,
-      GradesModule,
+      GradesModule
   ],
-  controllers: [AppController],
-  providers: [AppService]
 })
-export class AppModule {}
+export class AppModule { }

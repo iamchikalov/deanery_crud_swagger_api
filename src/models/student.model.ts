@@ -3,6 +3,7 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose"
 @Schema({
     collection: 'Students'
 })
+
 export class StudentModel {
 
     @Prop({type: String, required: true})
@@ -13,7 +14,5 @@ export class StudentModel {
 
     @Prop({type: Number, required: true})
     age: number
-
-    @Prop({type: })
 }
 export const StudentSchema = SchemaFactory.createForClass(StudentModel)

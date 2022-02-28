@@ -1,8 +1,8 @@
-import { Injectable } from "@nestjs/common";
-import { InjectModel } from "@nestjs/mongoose";
-import { GradesModel } from "../models/grades.model";
-import { Model } from "mongoose";
-import { GradesDto } from "../dto/grades.dto";
+import { Injectable } from "@nestjs/common"
+import { InjectModel } from "@nestjs/mongoose"
+import { GradesModel } from "../models/grades.model"
+import { Model } from "mongoose"
+import { GradesDto } from "../dto/grades.dto"
 
 @Injectable()
 export class GradesRepository {
@@ -30,5 +30,4 @@ export class GradesRepository {
     async deleteGrade(gradeId): Promise<any> {
         return this.gradesModel.findByIdAndRemove(gradeId)
     }
-
 }

@@ -29,5 +29,4 @@ export class StudentRepository {
     async deleteStudent(studentId): Promise<any> {
         return this.studentModel.findByIdAndRemove(studentId);
     }
-
 }

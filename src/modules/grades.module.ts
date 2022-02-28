@@ -21,4 +21,4 @@ import { GradesRepository } from "../repositories/grades.repository"
         }
     ]
 })
-export class GradesModule {}
+export class GradesModule { }

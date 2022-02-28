@@ -1,8 +1,18 @@
-import { Body, Controller, Delete, Get, HttpStatus, NotFoundException, Param, Patch, Post, Res } from "@nestjs/common";
-import { GradesService } from "../services/grades.service";
-import { ValidateObjectId } from "../shared/object-id.pipes";
-import { GradesDto } from "../dto/grades.dto";
-
+import {
+    Body,
+    Controller,
+    Delete,
+    Get,
+    Param,
+    Patch,
+    Post,
+    Res,
+    NotFoundException,
+    HttpStatus
+} from "@nestjs/common"
+import { GradesService } from "../services/grades.service"
+import { ValidateObjectId } from "../shared/object-id.pipes"
+import { GradesDto } from "../dto/grades.dto"
 
 @Controller()
 export class GradesController {
